@@ -81,14 +81,14 @@ def login():
                     continue
                 api.friendships_create(user_id)
                 print(f"{Fore.GREEN}Takip atıldı !:{user_id}")
-                sleep(5)
+                sleep(65)
             for usern in users_id:
                 if (api.friendships_show(str(usern))["following"] == False):
                     print("Onsuzda takip eilmir")
                     continue
                 api.friendships_destroy(usern)
-                print(f"{Fore.RED}Takipten atıldı :{user}")
-                sleep(5)
+                print(f"{Fore.RED}Takipten atıldı :{usern}")
+                sleep(70)
 
 
 main()
